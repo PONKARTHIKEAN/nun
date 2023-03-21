@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
+
+    <link rel="stylesheet" href="port.csss">
+</head>
+<style>
+    * {
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration:none;
+border: none;
+outline: none;
+scroll-behavior: smooth;
+font-family: 'poppins',sans-serif;
+}
+:root{
+   /* background-color: aquamarine; */
+   --bg-image:url(https://media.istockphoto.com/id/615420646/photo/young-evil-asian-woman-nun.jpg?s=612x612&w=0&k=20&c=MM9TZGBaPELGpLQSIoZDEy-yhxY-B91IlgB0eKMIS4o=) ;
+   --second-bg-color:rgb(1, 15, 1) ;
+   --text-color:hsl(130, 43%, 95%) ;
+   --main-color:rgb(231, 18, 18) ;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: var(--text-color);
+
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+     color: var(--main-color);
+
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content h3{
+        font-size: 3.2rem;
+        font-weight: 700;
+        
+}
+.home-content h1{
+    font-size: 5.6rem ;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-img img{
+    width: 35vw;
+    animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+
+    }
+    50%{
+        transform: translateY(-2.5rem);
+
+    }100%{
+        transform: translateY();
+
+    }
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+     background: transparent;
+     border: 2rem solid var(--main-color);
+      border-radius: 50%;
+      font-size: 2rem;
+     /* color: var(--main-color); */
+     margin: 3rem 1.5rem 3rem 0;
+     transition: 5s ease;  
+}
+.social-media a:hover{
+background: var(--main-color);
+color: var(--second-bg-color);
+box-shadow: 0 0 1rem var(--main-color);
+} 
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+font-size: 1.6rem;
+color: var(--second-bg-color);
+letter-spacing:.1rem;
+font-weight: 600;
+transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+span{
+    color: var(--main-color);
+}
+.home-content p{
+    font-size: 1.6rem;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+.services-box i{
+    font-size: 7rem;
+color: var(--main-color);
+
+}
+.services-box h3{
+    font-size: 2.6rem;
+
+}
+.services-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+
+}
+.about{
+    background-image: url(https://media.istockphoto.com/id/615420646/photo/young-evil-asian-woman-nun.jpg?s=612x612&w=0&k=20&c=MM9TZGBaPELGpLQSIoZDEy-yhxY-B91IlgB0eKMIS4o=);
+background-repeat: no-repeat;
+background-size: 100% 90%;
+}
+.about-img img{
+    width: 35vw;
+}
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;  
+}
+.about-content h3{
+    font-size: 2.6rem ;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    }
+    .services h2{
+        margin-bottom: 5rem;
+    }
+    .services-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+    }
+.services-container .services-box:hover{
+border-color: var(--main-color);
+transform: scale(1.02);
+}
+.services{
+    background: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+    .services-container .services-box{
+        flex: 1 1 30rem;
+        background: var(--second-bg-color);
+        padding: 3rem 2rem 4rem;
+        border-radius: 2rem;
+        text-align: center;
+        border: .2rem solid var(--bg-color);
+    transition: .10s ease;
+    }
+    .portfolio{
+        background: var(--second-bg-color);
+    }
+    .portfolio h2{
+        margin-bottom: 4rem;
+    }
+    .portfolio-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+   .portfolio-container .portfolio-box{
+position: relative;
+border-radius: 2rem;
+box-shadow: 0 0 2rem var(--bg-color);
+overflow: hidden;
+display: flex;
+    }
+    .portfolio-box:hover .portfolio-layer{
+        transform: translateY(0%);
+    }
+    .portfolio-box img{
+        width: 100%;
+        transition: .5s ease;
+    }
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(101, 100, 105),var(--main-color) );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.4rem;
+transform: translateY(100%);
+transition: .5s ease;
+}
+.portfolio-box img:hover img{
+     transform: scale(1.1);
+     transition: .5s ease;
+}
+.portfolio-layer h4{
+    font-size: 3rem;
+}
+.portfolio{   background-image: url(https://media.istockphoto.com/id/615420646/photo/young-evil-asian-woman-nun.jpg?s=612x612&w=0&k=20&c=MM9TZGBaPELGpLQSIoZDEy-yhxY-B91IlgB0eKMIS4o=);
+    background-repeat: no-repeat;
+    background-size: 100%;}
+.portfolio-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+.portfolio-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;    
+}
+.portfolio-layer a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+
+}
+.contact{
+    background-image: url(https://images.wallpapersden.com/image/ws-evil-nun-the-broken-mask-hd_87463.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;}
+.contact h2{
+margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+border-radius: .8rem;
+transition: .5s ease;
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.header.sticky{
+    border-bottom: 1rem solid black;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px){
+    .header{
+    padding:  2rem 3%;        
+}
+.contact{
+    min-height: auto;
+}
+.portfolio{
+    padding-bottom: 7rem;
+}
+.services{
+        padding-bottom: 7rem;
+}
+section{
+    padding: 10rem 3% 2rem;
+}
+.footer{
+    padding: 2rem 3%;
+}
+}
+@media(max-width:768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+padding: 1rem 3%;
+background: var(--bg-color);
+border-top: .1rem solid rgba(red, green, blue, alpha);
+box-shadow: 0 .5rem 1rem black;
+display: none;
+}
+.navbar.active{
+    display: block;
+}
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin:  3rem 0;
+    }
+.home{
+    flex-direction: column;
+}
+.home-content h3{
+    font-size: 2.6rem;
+}
+.home-content h1{
+    font-size: 5rem;
+}
+.home-img img{
+    width: 70vw;
+    margin-top: 4rem;
+}
+.about{
+    flex-direction: column-reverse;
+}
+.about img{
+    width: 70vw;
+    margin-top: 4rem;
+}
+.services h2{
+    margin-bottom: 3rem;
+}
+.portfolio h2{
+    margin-bottom: 3rem;
+}
+.portfolio-container{
+    grid-template-columns: repeat(2,1fr); 
+}
+}
+@media(max-width:617px){
+.portfolio-container{
+    grid-template-columns: 1fr;
+
+}
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media(max-width:365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .about-img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+</style>
+
+<body>
+    <header class="header">
+   <a href="#" class="logo">Portfolio</a> 
+   <i class='bx bx-menu' id="menu-icon" ></i>
+
+   <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+    </header>
+    
+<!-- <img  style="position: relative; top: %; 
+    left: 4%;" src="https://media.istockphoto.com/id/615420646/photo/young-evil-asian-woman-nun.jpg?s=612x612&w=0&k=20&c=MM9TZGBaPELGpLQSIoZDEy-yhxY-B91IlgB0eKMIS4o="  alt=""> -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello ,Its Me</h3>
+            <h1>Ponkarthikeyan B</h1>
+            <h3>And I'am a  <span class="multiple-text">Frontend Developer</span></h3>
+            <p>Psycho is a 1959 horror novel by American writer Robert Bloch. 
+                The novel tells the story of Norman Bates, a caretaker at an isolated motel who struggles under his domineering mother and becomes embroiled in a series of murders. 
+                The novel is considered Bloch's most enduring work and one of the most influential horror books of the 20th century.[2]</p>
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="#"><i class='bx bxl-twitter' ></i></a>
+        <a href="#"><i class='bx bxl-linkedin'></i></a>
+        <a href="#"><i class='bx bxl-gmail' ></i></a>    
+    </div>
+    <a href="#" class="btn"> Download CV</a>
+        </div>
+<div class="home-img">
+    <img src="https://images.unsplash.com/photo-1645680827507-9f392edae51c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzaWdufGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="" width="40%" height="50%">
+<img src="https://images5.alphacoders.com/310/310233.png" alt="">
+</div>
+    </section>
+<section class="about" id="about">
+    <img src="https://i.pinimg.com/originals/69/f9/e9/69f9e9afdabacb960185c5aaea3af619.gif"width="40%" height="50% alt="">
+    <div class="about-img">
+    </div>
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span> </h2>
+        <h3>Frontend Developer </h3>
+        <p>
+            Adolf Hitler (German: [ˈadɔlf ˈhɪtlɐ] (listen); 20 April 1889 – 30 April 1945) was an Austrian-born German politician who was the dictator of Germany from 1933 until his suicide in 1945. He rose to power as the leader of the Nazi Party,[a] becoming the chancellor in 1933 and then taking the title of Führer und Reichskanzler in 1934.[b] During his dictatorship, he initiated World War II in Europe by invading Poland on 1 September 1939. He was closely involved in military operations throughout the war and was central to the perpetration of the Holocaust: the genocide of about six million Jews and millions of other victims.
+
+Hitler was born in Braunau am Inn in Austria-Hungary and was raised near Linz. 
+
+He lived in Vienna later in the first decade of the 1900s and moved to Germany in 1913. 
+
+He was decorated during his service in the German Army in World War I. 
+        </p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+</section>
+<section class="services" id="services">
+    <h2 class="heading">Our <span>Services</span></h2>
+    <div class="services-container">
+        <div class="services-box">
+            <i class='bx bx-code-alt' ></i>
+            <h3>Web Development </h3>
+            <p>Hitler's father, Alois Hitler (1837–1903), was the illegitimate child of Maria Anna Schicklgruber.[5] 
+                 
+                The baptismal register did not show the name of his father, and Alois initially bore his mother's surname, 'Schicklgruber'. In 1842, Johann Georg Hiedler married Alois's mother. Alois was brought up in the family of Hiedler's brother, Johann Nepomuk Hiedler.[6] In 1876, Alois was made legitimate and his baptismal record annotated by a priest to register Johann Georg Hiedler as Alois's father (recorded as "Georg Hitler").[7][8] Alois then assumed the surname "Hitler",[8] also spelled 'Hiedler', 'Hüttler', or 'Huettler'. 
+                
+                The name is probably based on the German word Hütte (lit., "hut"), and likely has the meaning "one who lives in a hut".[</p>    
+       <a href="#" class="btn">Read more</a> 
+            </div>
+
+        <div class="services-box">
+            <i class='bx bxs-paint' ></i>
+            <h3>Graphic Design</h3>
+            <p>Hitler's father, Alois Hitler (1837–1903), was the illegitimate child of Maria Anna Schicklgruber.[5] 
+                 
+                The baptismal register did not show the name of his father, and Alois initially bore his mother's surname, 'Schicklgruber'. In 1842, Johann Georg Hiedler married Alois's mother. Alois was brought up in the family of Hiedler's brother, Johann Nepomuk Hiedler.[6] In 1876, Alois was made legitimate and his baptismal record annotated by a priest to register Johann Georg Hiedler as Alois's father (recorded as "Georg Hitler").[7][8] Alois then assumed the surname "Hitler",[8] also spelled 'Hiedler', 'Hüttler', or 'Huettler'. 
+                
+                The name is probably based on the German word Hütte (lit., "hut"), and likely has the meaning "one who lives in a hut".[</p>    
+       <a href="#" class="btn">Read more</a> 
+            </div>
+            <i class='bx bx-bar-chart-alt' ></i>
+            <div class="services-box">
+                <!-- <i class='bx bx-code-alt' ></i> -->
+                <i class='bx bx-bar-chart-alt' ></i>
+
+                <h3>Digital Marketing  </h3>
+                <p>Hitler's father, Alois Hitler (1837–1903), was the illegitimate child of Maria Anna Schicklgruber.[5] 
+                     
+                    The baptismal register did not show the name of his father, and Alois initially bore his mother's surname, 'Schicklgruber'. In 1842, Johann Georg Hiedler married Alois's mother. Alois was brought up in the family of Hiedler's brother, Johann Nepomuk Hiedler.[6] In 1876, Alois was made legitimate and his baptismal record annotated by a priest to register Johann Georg Hiedler as Alois's father (recorded as "Georg Hitler").[7][8] Alois then assumed the surname "Hitler",[8] also spelled 'Hiedler', 'Hüttler', or 'Huettler'. 
+                    
+                    The name is probably based on the German word Hütte (lit., "hut"), and likely has the meaning "one who lives in a hut".[</p>    
+           <a href="#" class="btn">Read more</a> 
+                </div>
+
+        </div>
+</section>
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Project</span></h2>
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+        <img src="data:image/jpeg;base64,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"  width="20%" height="5%" alt="">
+   <div class="portfolio-layer">
+    <h4>Web Design</h4>
+    <p>  against this decision, and in Mein Kampf states that he intentionally did poorly in school, hoping that once his father saw "what little progress I was making at the technical school he would let me devote myself to my dream".[34]</p>
+<a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+    <div class="portfolio-box">
+        <img src="https://media.istockphoto.com/id/1253107522/photo/scary-gray-alien-stands-and-looks-blinking-on-a-dark-smoky-background-ufo-futuristic-concept.jpg?s=612x612&w=0&k=20&c=TEK2iT2XZq_MvxhUphzRV6_Ql3bukq-o5auzxjvi-Lw=" alt="">
+        <!-- <img src="https://imgk.timesnownews.com/story/iStock-137008766_31.jpg" alt=""> -->
+   <div class="portfolio-layer">
+    <h4>Web Design</h4>
+    <p>
+        hi its me
+    </p>
+<a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+    <div class="portfolio-box">
+        <img src="https://wallpaper-house.com/data/out/6/wallpaper2you_90970.jpg" alt="">
+ <!-- <img src="data:image/jpeg;base64,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" alt=""> -->
+        <!-- <img src="https://imgk.timesnownews.com/story/iStock-137008766_31.jpg" alt=""> -->
+   <div class="portfolio-layer">
+    <h4>Web Design</h4>
+    <p> hi its me</p>
+    <a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+    <div class="portfolio-box">
+        <!-- <img src="https://imgk.timesnownews.com/story/iStock-137008766_31.jpg" alt=""> -->
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_BTYg8e76pcGwoA9cOE_sTFPnvH9JfkFhuqQtV1jlJxR2mqijrKh_30qSCLxExCivDT8&usqp=CAU" width="5%" height="2%" alt="">
+        <div class="portfolio-layer">
+    <h4>Web Design</h4>
+    <p>hi its me</p>
+    <a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+    <div class="portfolio-box">
+        <!-- <img src="https://imgk.timesnownews.com/story/iStock-137008766_31.jpg" alt=""> -->
+<img src="https://gomechanic.in/blog/wp-content/uploads/2020/04/How-the-Maruti-Vitara-Brezza-Changed-the-Compact-SUV-Category-in-India-01-01.jpg" alt="">
+        <div class="portfolio-layer">
+    <h4>Web Design</h4>
+    <p>hi its me</p>
+<a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+    <div class="portfolio-box">
+        <!-- <img src="https://imgk.timesnownews.com/story/iStock-137008766_31.jpg" alt=""> -->
+<img src="https://imageio.forbes.com/blogs-images/jeffewing/files/2018/09/Valak.jpg?format=jpg&width=960" alt="">
+        <div class="portfolio-layer">
+    <h4>Web Design</h4>
+   <p>hi its me</p>
+    <a href="#"><i class='bx bx-link-alt' ></i></a>   
+</div>
+    </div>
+</div>
+</section>
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>!Me</span></h2>
+    <form action="#">
+        <div class="input-box">
+            <input type="text" placeholder="fullname">
+            <input type="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+            <input type="Number" placeholder="Mobile Number">
+            <input type="text" placeholder=" Email Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+    <input type="submit"class="btn" value="Send Message" >
+    </form>
+</section>
+<footer class="footer">
+    <div class="footer-text">
+        <p>presented in;2023 by me Ponkarthikeyan B</p>
+    </div>
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
+    </div>
+</footer>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    let menuIcon=document.querySelector('#menu-icon');
+    let navbar=document.querySelector('.navbar');
+   menuIcon.onclick=()=>{
+menuIcon.classList.toggle('bx-x');
+navbar.classList.toggle('active');
+   };
+    let sections=document.querySelectorAll('section');
+let navLinks=document.querySelectorAll('header nav a');
+window.onscroll=() => {
+    sections.forEach(sec=>{
+        let top=window.scrollY;
+        let offset=sec.offsetTop-150;
+        let height=sec.offsetHeight;
+        let id=sec.getAttribute('id');
+        if(top>=offset && top <offset + height){
+            navLinks.forEach(links=>{
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*='+ id +']').classList.add('active');
+            });
+        };
+    });
+    let header=document.querySelector('header');
+
+    header.classList.toggle('sticky',window.scrollY>100)
+
+    menuIcon.classList.remove('bx-x');
+navbar.classList.remove('active');
+};
+
+ScrollReveal({ 
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay:200 
+    });
+    ScrollReveal().reveal('.home--content , .heading', { origin:'top' });
+    ScrollReveal().reveal('.home--img , .services-container , .portfolio-box , contact form', { origin:'bottom' });
+
+    ScrollReveal().reveal('.home--content p , .about-content', { origin:'right' });
+    ScrollReveal().reveal('.home--content h1 , .about-img', { origin:'left' });
+
+    const typed=new Typed('.multiple-text', 
+    {
+        Strings: ['Frontend Developer', 'Youtuber','Blogger'],
+        typeSpeed:100,
+        backSpeed:100,
+        backDelay:1000,
+    } );
+
+</script>
+</body>
+</html>
